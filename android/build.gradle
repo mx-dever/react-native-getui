@@ -67,7 +67,7 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.android.support:support-v4:25+"
     implementation "com.facebook.react:react-native:+"  // From node_modules
-    implementation 'com.getui:sdk-for-google-play:4.3.5.9'
+    implementation 'com.getui:sdk-for-google-play:4.3.9.0'
     implementation 'com.getui:mzp-for-google-play:1.0.9'
     implementation 'com.getui:xmp-for-google-play:1.0.6'
     implementation 'com.getui:hwp-for-google-play:1.0.6'
