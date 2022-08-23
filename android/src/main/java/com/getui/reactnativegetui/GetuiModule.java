@@ -71,15 +71,14 @@ public class GetuiModule extends ReactContextBaseJavaModule {
     public static void initPush(Context context){
         mContext = context;
         GetuiLogger.log("initPush, mContext = " + mContext);
-        PushManager.getInstance().initialize(mContext, DemoPushService.class);
-        PushManager.getInstance().registerPushIntentService(mContext, PushIntentService.class);
+        PushManager.getInstance().initialize(mContext);
     }
     /**
      * Android 不存在 destroy方法，仅停止推送服务
      */
     @ReactMethod
     public void destroy(){
-        PushManager.getInstance().stopService(mContext);
+        PushManager.getInstance().turnOffPush(mContext);
     }
 
     /**
@@ -87,7 +86,7 @@ public class GetuiModule extends ReactContextBaseJavaModule {
      */
     @ReactMethod
     public void stop(){
-        PushManager.getInstance().stopService(mContext);
+        PushManager.getInstance().turnOffPush(mContext);
     }
 
     /**
